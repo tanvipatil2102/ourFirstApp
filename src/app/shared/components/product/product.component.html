@@ -1,0 +1,108 @@
+<!-- <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-pills mt-4 justify-content-center">
+                <li class="nav-item">
+                    <a href="javascript:;" class="nav-link"
+                    [ngClass]="{
+                        active : selectedEvent === 'all'
+                    }"
+                    >
+                        All
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:;" class="nav-link"
+                    [ngClass]="{
+                        active : selectedEvent === 'available products'
+                    }"
+                    >
+                        Available products
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:;" class="nav-link"
+                    [ngClass]="{
+                        active : selectedEvent === 'notAvl products'
+                    }"
+                    >
+                        Unavailable products
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" *ngFor="let obj of productArr">
+            <div class="card mt-4"
+            *ngIf="selectedEvent ==='available products'; then obj.isAvailable === true; else selectedEvent === 'notAvl products'; then obj.isAvailable === false;" 
+            [ngClass]="{
+                'notAvl' : !obj.isAvailable
+            }"
+            >
+            <div class="prodNotAvl" *ngIf="!obj.isAvailable">
+                <p>Product is not available</p>
+            </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="image">
+                                <img 
+                                *ngIf="obj.image; else mobileImg"
+                                [src]="obj.image" alt="img">
+                                <ng-template #mobileImg>
+                                    <img src="https://placehold.co/600X400" alt="img">
+                                </ng-template>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="title">
+                                <h2 class="m-0 text-bold">{{obj.name}}</h2>
+                            </div>
+                            <div class="rating mb-4 d-flex align-items-center justify-content-center rounded pl-1 pr-1 pt-0 pb-0 text-white"
+                            [ngClass]="{
+                                'bg-success': obj.rating > 4,
+                                'bg-warning': obj.rating >=3 && obj.rating < 4,
+                                'bg-danger': obj.rating < 3
+                            }"
+                            >
+                                <span>{{obj.rating}}</span><mat-icon class="icon pt-1 text-center" aria-hidden="false" aria-label="Example star icon" fontIcon="star"></mat-icon>
+
+                            </div>
+                            <div class="highlight">
+                                <ul class="pl-2" *ngFor="let spec of obj.highlights">
+                                    <li class="listItem">{{spec}}</li>
+                                </ul>
+                                  
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="price d-flex mb-2">
+                                    <span class="material-symbols-outlined">
+                                    currency_rupee
+                                    </span>
+                                <span class="mr-4">{{obj.price}}</span>
+                                <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" alt="assured" width="80px">
+                            </div>
+                            <div class="d-flex">
+                                <small class="offer d-flex align-items-center">
+                                    <span class="material-symbols-outlined">
+                                        currency_rupee
+                                    </span>
+                                        14000 
+                                </small>
+                                <small class="off ml-2">
+                                    58% off
+                                </small>
+                            </div>
+                            <small>Free delivery</small>
+                            <div>
+                                <small class="save">Save more with combo offers</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
